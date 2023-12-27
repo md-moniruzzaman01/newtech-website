@@ -5,13 +5,17 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#353535",
+        primary: "#0DADE0",
+        secondary: "#101250",
         disable: "#707070",
         gray: "#707070",
         dark: "#353535",
       },
       fontFamily: {
         primary: ["Poppins", "sans-serif"],
+      },
+      backgroundImage: {
+        hero_image: "url('/computer repair.jpg')",
       },
     },
   },

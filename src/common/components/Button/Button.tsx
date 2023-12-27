@@ -15,7 +15,6 @@ const Button: FC<ButtonProps> = ({
   disabled = false,
   href,
   children,
-  targetBlank,
   type,
   loading,
   secondary,
@@ -24,13 +23,13 @@ const Button: FC<ButtonProps> = ({
 }) => {
   // ---- CLASSES -----
   const CLASSES =
-    `relative text-white h-auto bg-primary inline-flex items-center justify-center rounded-full lg:px-8 md:px-6 lg:py-3 md:py-2 py-2 transition-all font-medium duration-300	${
+    ` text-white h-auto bg-primary inline-flex items-center justify-center rounded-full lg:px-8 md:px-6 lg:py-3 md:py-2 py-2 transition-all font-medium duration-300	${
       disabled && "!bg-disable hover:!bg-disable cursor-not-allowed"
     } ${
       loading && "cursor-not-allowed !bg-disable hover:!bg-disable"
     } ${fontSize} ${sizeClass} ${translate} ${className} ` + twFocusClass(true);
 
-  const SECONDARY_CLASS = `bg-transparent outline outline-[1.7px] !text-primary outline-primary hover:!text-white hover:!bg-primary`;
+  const SECONDARY_CLASS = `bg-transparent outline outline-[1.7px] !text-primary outline-primary hover:!text-white hover:!bg-secondary`;
 
   const ICON_CLASS = `w-[20px] h-[20px] mr-[8px] bg-white/30 flex items-center justify-center rounded-full p-[4px]`;
   // ---- CLASSES -----

@@ -2,9 +2,9 @@
 import { menuData } from "@config/constants";
 import { navDataTypes, singleMenuTypes } from "@config/types";
 import Link from "next/link";
-import { FaCaretDown } from "react-icons/fa";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { icons } from "@libs/Icons";
 const Mobile_navbar = ({ toggleMenu }: { toggleMenu: boolean }) => {
   const pathname = usePathname();
   const [activeLink, setActiveLink] = useState("");
@@ -28,7 +28,7 @@ const Mobile_navbar = ({ toggleMenu }: { toggleMenu: boolean }) => {
             >
               {menuItem.label}
               <span className="text-[10px]">
-                {menuItem.subItems.length > 0 && <FaCaretDown />}
+                {menuItem.subItems.length > 0 && icons.DownArrow}
               </span>
             </span>
           </Link>

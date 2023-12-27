@@ -1,11 +1,28 @@
 // import icons
-import { SiDiscord } from "react-icons/si";
-import { AiFillCaretDown } from "react-icons/ai";
-import { RiMenu3Line } from "react-icons/ri";
+import {
+  FaCaretDown,
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+} from "react-icons/fa";
+
+import { IoMdClose } from "react-icons/io";
+import { MdMenu } from "react-icons/md";
+import { FaXTwitter } from "react-icons/fa6";
+import ComputerRepair from "./custom icons/ComputerRepair";
+import SheildIcon from "./custom icons/SheildIcon";
+import UserRepairIcon from "./custom icons/UserRepairIcon";
 
 // export
 export const icons: any = {
-  discord: <SiDiscord />,
-  arrowBottom: <AiFillCaretDown />,
-  menu: <RiMenu3Line />,
+  DownArrow: <FaCaretDown />,
+  MenuOpen: <MdMenu />,
+  MenuClose: <IoMdClose />,
+  facebook: <FaFacebookF />,
+  Instagram: <FaInstagram />,
+  LinkedinIn: <FaLinkedinIn />,
+  Twitter: <FaXTwitter />,
+  comoputerRepair: <ComputerRepair />,
+  shieldSearch: <SheildIcon />,
+  userRepair: <UserRepairIcon />,
 };

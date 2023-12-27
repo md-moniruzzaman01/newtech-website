@@ -1,13 +1,13 @@
 "use client";
-
-import styles from "./css/Header.module.css";
-
 import { useEffect, useState } from "react";
 
 import Image from "next/image";
+//
+import styles from "./css/Header.module.css";
 import Mobile_navbar from "./partials/Mobile nav";
-import { IoMdClose } from "react-icons/io";
-import { MdMenu } from "react-icons/md";
+import { icons } from "@libs/Icons";
+import Button from "@components/Button";
+
 // ... (your existing imports)
 
 const Header = () => {
@@ -16,7 +16,7 @@ const Header = () => {
 
   const handleScroll = () => {
     const scrollTop = window.scrollY;
-    setIsScrolled(scrollTop > 800);
+    setIsScrolled(scrollTop > 1000);
   };
 
   useEffect(() => {
@@ -29,11 +29,11 @@ const Header = () => {
   return (
     <div>
       <nav
-        className={`w-full ${styles.navbar} ${
+        className={`w-full z-39 ${styles.navbar} ${
           isScrolled ? styles.scrolled : ""
         }`}
       >
-        <div className="max-w-[1440px] mx-auto flex items-center justify-between w-full py-4 ">
+        <div className="container px-2 h-16 lg:h-20 mx-auto flex items-center justify-between w-full py-4 ">
           <div className="px-4">
             {/* Logo  */}
             <Image
@@ -44,46 +44,40 @@ const Header = () => {
               className=""
             />
           </div>
-          <ul className="hidden lg:flex  gap-11">
+          <ul className="hidden lg:flex items-center  gap-11">
             <Mobile_navbar toggleMenu={toggleMenu} />
+            <Button secondary>Create a Repair</Button>
           </ul>
 
-          <div className="lg:hidden flex items-center text-3xl px-4 text-black">
+          <div className="lg:hidden flex items-center text-3xl px-4 text-black relative">
             <button onClick={() => setToggleMenu(!toggleMenu)}>
               {!toggleMenu ? (
-                <span>
-                  <MdMenu />
-                </span>
+                <span>{icons.MenuOpen}</span>
               ) : (
-                <span>
-                  <IoMdClose />
-                </span>
+                <span>{icons.MenuClose}</span>
               )}
             </button>
           </div>
         </div>
         {/* mobile navigation */}
         <div
-          className={`fixed top-0 z-40 w-full ${
-            styles.glass_effect
-          } overflow-hidden  lg:hidden gap-12  origin-top duration-1000 ${
+          className={`fixed top-0 z-40 w-full glass_effect overflow-hidden  lg:hidden gap-12  origin-top duration-1000 ${
             !toggleMenu ? "h-0" : "h-full"
           }`}
-          style={{ top: isScrolled ? "0" : "-100%" }}
         >
-          <div>
-            <div className="flex justify-end mx-11 my-11 text-3xl text-black">
-              <button onClick={() => setToggleMenu(false)}>
-                <span>
-                  <IoMdClose />
-                </span>
-              </button>
-            </div>
-            <div className="p-8 ">
-              {/* Mobile nav  */}
-              <ul className="flex flex-col gap-8 font-bold tracking-wider text-xl">
-                <Mobile_navbar toggleMenu={toggleMenu} />
-              </ul>
+          <div className="relative">
+            <div>
+              <div className="flex justify-end mx-11 my-11 text-3xl text-black">
+                <button onClick={() => setToggleMenu(false)}>
+                  <span>{icons.MenuClose}</span>
+                </button>
+              </div>
+              <div className="p-8 z-41">
+                {/* Mobile nav  */}
+                <ul className="flex flex-col gap-8 font-bold tracking-wider text-xl  ">
+                  <Mobile_navbar toggleMenu={toggleMenu} />
+                </ul>
+              </div>
             </div>
           </div>
         </div>
