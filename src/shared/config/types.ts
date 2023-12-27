@@ -21,10 +21,15 @@ export type ButtonProps = {
   secondary?: boolean;
   type?: ButtonHTMLAttributes<HTMLButtonElement>["type"];
   href?: string;
-  targetBlank?: boolean;
   onClick?: () => void;
   children?: ReactNode;
   icon?: string;
+};
+// button props
+export type CardProps = {
+  className?: string;
+  href?: string;
+  children?: ReactNode;
 };
 
 // nav Data types

@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { navDataTypes } from "./types";
+import { navDataTypes, singleMenuTypes } from "./types";
 
 // whenever wee need to change default className value we will use this
 export const cx = classNames;
@@ -17,19 +17,15 @@ export const menuData: Array<navDataTypes> = [
   {
     to: "/repair-services",
     label: "Repair Services",
-    subItems: [
-      { to: "/mobile", label: "Mobile service" },
-      { to: "/desktop", label: "Desktop service" },
-      { to: "/server", label: "Server service" },
-    ],
+    subItems: [],
   },
   {
-    to: "/about ",
+    to: "/about",
     label: "About ",
     subItems: [],
   },
   {
-    to: "/blog ",
+    to: "/blog",
     label: "Blog ",
     subItems: [],
   },
@@ -39,3 +35,37 @@ export const menuData: Array<navDataTypes> = [
     subItems: [],
   },
 ];
+export const helpData: Array<singleMenuTypes> = [
+  {
+    to: "/",
+    label: "Customer Support ",
+  },
+  {
+    to: "/",
+    label: "Terms & Conditions",
+  },
+  {
+    to: "/ ",
+    label: "Privacy Policy ",
+  },
+];
+
+export const layout_data = {
+  navbar: {
+    button: {
+      text: "create a Repair",
+      link: "/repair-services",
+    },
+  },
+  footer: {
+    subtitle:
+      "Clarity gives you the blocks and components you need to create a truly professional",
+    copywrite: "Newtech Technology",
+    social_links: {
+      facebook: "/",
+      Instagram: "/",
+      LinkedinIn: "/",
+      Twitter: "/",
+    },
+  },
+};

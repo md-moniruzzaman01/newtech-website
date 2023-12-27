@@ -16,8 +16,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="no-scrollbar">
-        <header className="mb-20">
+      <body className="no-scrollbar max-w-[2400px] mx-auto">
+        <header className="">
           <Header />
         </header>
         <main>{children}</main>

@@ -1,9 +1,9 @@
-export default function Home() {
+import Home from "@modules/Home";
+
+export default function Homepage() {
   return (
     <>
-      <div className="min-h-[300vh]  flex justify-center items-center">
-        <p className="text-3xl">Home</p>
-      </div>
+      <Home />
     </>
   );
 }
