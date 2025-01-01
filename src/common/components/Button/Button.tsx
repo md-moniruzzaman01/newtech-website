@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 import React, { FC } from "react";
 import Link from "next/link";
@@ -12,6 +13,22 @@ const Button: FC<ButtonProps> = ({
   translate = "",
   sizeClass = "px-[12px] py-[8px]",
   fontSize = "text-[12px] md:text-[14px] lg:text-[16px]",
+=======
+'use client';
+import React, { FC } from 'react';
+import Link from 'next/link';
+//
+import twFocusClass from '@utils/twFocusClass';
+import { cx } from '@config/constants';
+import { ButtonProps } from '@config/types';
+import { icons } from '@libs/Icons';
+
+const Button: FC<ButtonProps> = ({
+  className = '',
+  translate = '',
+  sizeClass = 'px-[12px] py-[8px]',
+  fontSize = 'text-[12px] md:text-[14px] lg:text-[16px]',
+>>>>>>> 0ca3b1baf3b942d49ea9b5ffbb79c6967b464a7b
   disabled = false,
   href,
   children,
@@ -24,9 +41,15 @@ const Button: FC<ButtonProps> = ({
   // ---- CLASSES -----
   const CLASSES =
     ` text-white h-auto bg-primary inline-flex items-center justify-center rounded-full lg:px-8 md:px-6 lg:py-3 md:py-2 py-2 transition-all font-medium duration-300	${
+<<<<<<< HEAD
       disabled && "!bg-disable hover:!bg-disable cursor-not-allowed"
     } ${
       loading && "cursor-not-allowed !bg-disable hover:!bg-disable"
+=======
+      disabled && '!bg-disable hover:!bg-disable cursor-not-allowed'
+    } ${
+      loading && 'cursor-not-allowed !bg-disable hover:!bg-disable'
+>>>>>>> 0ca3b1baf3b942d49ea9b5ffbb79c6967b464a7b
     } ${fontSize} ${sizeClass} ${translate} ${className} ` + twFocusClass(true);
 
   const SECONDARY_CLASS = `bg-transparent outline outline-[1.7px] !text-primary outline-primary hover:!text-white hover:!bg-secondary`;

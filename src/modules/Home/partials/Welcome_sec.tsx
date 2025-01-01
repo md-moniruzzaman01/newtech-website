@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 import Button from "@components/Button";
 import styles from "../../../shared/styles/home.module.css";
 import { home_data } from "../config/constants";
 import Card from "@components/Card";
 import { welcomeCardProps } from "../config/types";
+=======
+import Button from '@components/Button';
+import styles from '../../../shared/styles/home.module.css';
+import { home_data } from '../config/constants';
+import Card from '@components/Card';
+import { welcomeCardProps } from '../config/types';
+>>>>>>> 0ca3b1baf3b942d49ea9b5ffbb79c6967b464a7b
 const Welcome_sec = () => {
   const { welcome } = home_data;
   return (

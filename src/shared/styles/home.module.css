@@ -1,4 +1,5 @@
 .hero_image {
+<<<<<<< HEAD
   background-image: url("/computer repair.jpg");
 }
 
@@ -7,6 +8,25 @@
 }
 
 @media screen and (max-width: 991px) {
+=======
+  background-image: url('/computer repair.jpg');
+}
+
+.laptop_image {
+  background-image: url('/laptop1.jpg');
+  width: 100%;
+  height: 700px;
+  background-size: cover;
+  background-position: center;
+}
+
+@media screen and (max-width: 991px) {
+  .laptop_image {
+    height: 1000px;
+  }
+}
+@media screen and (max-width: 991px) {
+>>>>>>> 0ca3b1baf3b942d49ea9b5ffbb79c6967b464a7b
   .button_animate {
     position: static;
   }
@@ -18,7 +38,11 @@
   }
 
   .button_animate:before {
+<<<<<<< HEAD
     content: "";
+=======
+    content: '';
+>>>>>>> 0ca3b1baf3b942d49ea9b5ffbb79c6967b464a7b
     position: absolute;
     outline: 2px solid var(--secondary-color);
     animation: animate 1s linear infinite;
