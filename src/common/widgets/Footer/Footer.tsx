@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-import styles from "./css/footer.module.css";
-
-import Brand from "@components/Brand";
-import BranchCards from "./partials/BranchCards";
-import Navigation_sec from "./partials/Navigation_sec";
-import Help_Navigation_sec from "./partials/Help_Navigation_sec";
-import News_letter_sec from "./partials/News_letter_sec";
-import { icons } from "@libs/Icons";
-import { layout_data } from "@config/constants";
-import Link from "next/link";
-const Footer = () => {
-  return (
-    <footer
-      className={`w-full min-h-[50vh] background_image mt-20 pt-11 ${styles.background_image}`}
-=======
 import React from 'react';
 import styles from './css/footer.module.css';
 
@@ -30,7 +13,6 @@ const Footer = () => {
   return (
     <footer
       className={`w-full min-h-[50vh] background_image  pt-11 ${styles.background_image}`}
->>>>>>> 0ca3b1baf3b942d49ea9b5ffbb79c6967b464a7b
     >
       <BranchCards />
       <div className="container py-11 mx-auto  px-4">
@@ -70,13 +52,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-      <div className="py-6 flex justify-center items-center text-white text-lg">
-        <p className="text-center">
-          © <span>{layout_data.footer.copywrite}</span> |{" "}
-          <span> All Rights Reserved.</span>
-        </p>
-=======
       <div className="py-6 flex justify-between items-center mx-4  text-white text-lg">
         <div>
           © <span>{layout_data.footer.copywrite}</span> |{' '}
@@ -89,7 +64,6 @@ const Footer = () => {
             Task Technology
           </Link>
         </div>
->>>>>>> 0ca3b1baf3b942d49ea9b5ffbb79c6967b464a7b
       </div>
     </footer>
   );
