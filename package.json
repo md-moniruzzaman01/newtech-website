@@ -5,18 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-<<<<<<< HEAD
     "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "classnames": "^2.3.2",
-    "next": "14.0.4",
-    "react": "^18",
-    "react-dom": "^18",
-    "react-icons": "^4.12.0"
-=======
-    "start": "NODE_ENV=production node server.js",
     "lint": "next lint"
   },
   "dependencies": {
@@ -32,7 +21,6 @@
     "react-intersection-observer": "^9.13.1",
     "react-slick": "^0.30.2",
     "slick-carousel": "^1.8.1"
->>>>>>> 0ca3b1baf3b942d49ea9b5ffbb79c6967b464a7b
   },
   "devDependencies": {
     "@types/node": "^20",
