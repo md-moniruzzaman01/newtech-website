@@ -79,13 +79,13 @@ const Header = () => {
                   <FaCog className="inline mr-2" />
                   Settings
                 </Link>
-                <Link
+                {/* <Link
                   href="/logout"
                   className="block px-4 py-2 text-secondary hover:bg-primary w-full text-left hover:text-white"
                 >
                   <FaSignOutAlt className="inline mr-2" />
                   Logout
-                </Link>
+                </Link> */}
               </div>
             </div>
             <Link href="/repair-services">
