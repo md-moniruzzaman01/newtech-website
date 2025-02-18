@@ -17,23 +17,23 @@ import { FaPen } from "react-icons/fa";
 const Profile = () => {
   const [user, setUser] = useState<any>(null);
   const [profilePic, setProfilePic] = useState(dp);
-  const [isClient, setIsClient] = useState(false);
+  // const [isClient, setIsClient] = useState(false);
 
-  useEffect(() => {
-    setIsClient(true);
-    const userData = localStorage.getItem("user");
-    if (userData) {
-      setUser(JSON.parse(userData));
-    }
-  }, []);
+  // useEffect(() => {
+  //   setIsClient(true);
+  //   const userData = localStorage.getItem("user");
+  //   if (userData) {
+  //     setUser(JSON.parse(userData));
+  //   }
+  // }, []);
 
-  if (!isClient || !user) {
-    return (
-      <div className="flex justify-center items-center min-h-screen text-teal-600 text-lg font-medium">
-        Loading...
-      </div>
-    );
-  }
+  // if (!isClient || !user) {
+  //   return (
+  //     <div className="flex justify-center items-center min-h-screen text-teal-600 text-lg font-medium">
+  //       Loading...
+  //     </div>
+  //   );
+  // }
 
   const userServiceData = {
     firstName: "Isabel",
